@@ -1,0 +1,120 @@
+.social-sidebar {
+  position: fixed;
+  left: 2rem;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  z-index: 90;
+}
+
+.social-sidebar-line {
+  width: 1px;
+  height: 90px;
+  background: linear-gradient(to top, var(--primary), transparent);
+}
+
+.social-sidebar-line:first-child {
+  background: linear-gradient(to bottom, var(--primary), transparent);
+}
+
+.social-sidebar-links {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.social-icon-link {
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: color var(--transition-fast), transform var(--transition-fast);
+}
+
+.social-icon-link:hover {
+  color: var(--secondary);
+  transform: translateY(-3px) scale(1.15);
+}
+
+.social-icon-link .tooltip {
+  position: absolute;
+  left: 2.5rem;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  backdrop-filter: blur(8px);
+  padding: 0.25rem 0.65rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  color: #fff;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(-10px);
+  transition: opacity var(--transition-fast), transform var(--transition-fast), visibility var(--transition-fast);
+  pointer-events: none;
+}
+
+.social-icon-link:hover .tooltip {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+}
+
+/* Mobile Footer styling */
+.mobile-footer {
+  width: 100%;
+  padding: 3rem 2rem;
+  background: rgba(8, 7, 16, 0.95);
+  border-top: 1px solid rgba(192, 132, 252, 0.05);
+  margin-top: 5rem;
+  display: block;
+}
+
+.mobile-footer-content {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  text-align: center;
+}
+
+.mobile-social-links {
+  display: flex;
+  gap: 1.75rem;
+}
+
+.mobile-social-icon {
+  color: var(--text-muted);
+  transition: color var(--transition-fast), transform var(--transition-fast);
+}
+
+.mobile-social-icon:hover {
+  color: var(--secondary);
+  transform: translateY(-2px);
+}
+
+/* Responsive Rules */
+@media (min-width: 769px) {
+  .mobile-footer-content p {
+    text-align: right;
+    width: 100%;
+  }
+  .mobile-footer-content {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+  .mobile-social-links {
+    display: none; /* Already in sidebar for desktop view */
+  }
+}
+
+@media (max-width: 768px) {
+  .social-sidebar {
+    display: none; /* Hide sidebar on mobile */
+  }
+}

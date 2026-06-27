@@ -1,0 +1,64 @@
+.custom-cursor-dot {
+  width: 6px;
+  height: 6px;
+  background-color: var(--secondary);
+  border-radius: 50%;
+  position: fixed;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 9999;
+  transition: width 0.2s, height 0.2s, background-color 0.2s;
+}
+
+.custom-cursor-ring {
+  width: 36px;
+  height: 36px;
+  border: 1.5px solid var(--primary);
+  border-radius: 50%;
+  position: fixed;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 9998;
+  transition: width 0.3s cubic-bezier(0.1, 0.8, 0.3, 1), 
+              height 0.3s cubic-bezier(0.1, 0.8, 0.3, 1), 
+              border-color 0.3s, 
+              background-color 0.3s, 
+              box-shadow 0.3s;
+}
+
+/* Hover States */
+.custom-cursor-dot.hovered {
+  width: 8px;
+  height: 8px;
+  background-color: var(--primary);
+}
+
+.custom-cursor-ring.hovered {
+  width: 56px;
+  height: 56px;
+  border-color: var(--secondary);
+  background-color: rgba(34, 211, 238, 0.05);
+  box-shadow: 0 0 15px rgba(34, 211, 238, 0.3);
+}
+
+/* Clicked States */
+.custom-cursor-dot.clicked {
+  transform: translate(-50%, -50%) scale(0.6);
+  background-color: var(--accent);
+}
+
+.custom-cursor-ring.clicked {
+  width: 24px;
+  height: 24px;
+  border-color: var(--accent);
+  background-color: rgba(244, 63, 94, 0.1);
+  box-shadow: 0 0 10px rgba(244, 63, 94, 0.3);
+}
+
+/* Hide cursor on small/touch screens */
+@media (max-width: 1024px) {
+  .custom-cursor-dot,
+  .custom-cursor-ring {
+    display: none !important;
+  }
+}
