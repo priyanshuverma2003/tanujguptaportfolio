@@ -1,104 +1,127 @@
-.social-sidebar {
-  display: none;
+/* ==============================
+   Social Section
+============================== */
+.social-section {
+  padding-bottom: 2rem;
 }
 
-.social-sidebar-line {
-  width: 1px;
-  height: 90px;
-  background: linear-gradient(to top, var(--primary), transparent);
+.social-section-lead {
+  font-size: 1.15rem;
+  color: var(--text-muted);
+  max-width: 600px;
+  margin-bottom: 3rem;
+  line-height: 1.7;
 }
 
-.social-sidebar-line:first-child {
-  background: linear-gradient(to bottom, var(--primary), transparent);
-}
-
-.social-sidebar-links {
-  display: flex;
-  flex-direction: column;
+.social-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   gap: 1.5rem;
 }
 
-.social-icon-link {
-  color: var(--text-muted);
+.social-card {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 1.5rem 1.75rem;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 16px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  transition: border-color var(--transition-normal),
+              box-shadow var(--transition-normal),
+              transform var(--transition-fast);
+}
+
+.social-card:hover {
+  border-color: var(--card-border-hover);
+  box-shadow: 0 12px 35px -10px rgba(34, 211, 238, 0.15);
+  transform: translateY(-4px);
+}
+
+.social-card-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
-  transition: color var(--transition-fast), transform var(--transition-fast);
-}
-
-.social-icon-link:hover {
-  color: var(--secondary);
-  transform: translateY(-3px) scale(1.15);
-}
-
-.social-icon-link .tooltip {
-  position: absolute;
-  left: 2.5rem;
-  background: var(--card-bg);
-  border: 1px solid var(--card-border);
-  backdrop-filter: blur(8px);
-  padding: 0.25rem 0.65rem;
-  border-radius: 4px;
-  font-size: 0.75rem;
   color: #fff;
-  white-space: nowrap;
-  opacity: 0;
-  visibility: hidden;
-  transform: translateX(-10px);
-  transition: opacity var(--transition-fast), transform var(--transition-fast), visibility var(--transition-fast);
-  pointer-events: none;
+  flex-shrink: 0;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
-.social-icon-link:hover .tooltip {
-  opacity: 1;
-  visibility: visible;
-  transform: translateX(0);
-}
-
-/* Mobile Footer styling */
-.mobile-footer {
-  width: 100%;
-  padding: 3rem 2rem;
-  background: rgba(8, 7, 16, 0.95);
-  border-top: 1px solid rgba(192, 132, 252, 0.05);
-  margin-top: 5rem;
-  display: block;
-}
-
-.mobile-footer-content {
-  max-width: var(--max-width);
-  margin: 0 auto;
+.social-card-info {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 1.5rem;
-  text-align: center;
+  gap: 0.15rem;
+  flex: 1;
+  min-width: 0;
 }
 
-.mobile-social-links {
-  display: flex;
-  gap: 1.75rem;
+.social-card-info h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--foreground);
+  line-height: 1.3;
 }
 
-.mobile-social-icon {
+.social-handle {
+  font-size: 0.85rem;
+  color: var(--primary);
+  font-weight: 500;
+}
+
+.social-card-info p {
+  font-size: 0.82rem;
   color: var(--text-muted);
+  line-height: 1.4;
+  margin-top: 0.25rem;
+}
+
+.social-card-arrow {
+  color: var(--text-muted);
+  flex-shrink: 0;
   transition: color var(--transition-fast), transform var(--transition-fast);
 }
 
-.mobile-social-icon:hover {
+.social-card:hover .social-card-arrow {
   color: var(--secondary);
-  transform: translateY(-2px);
+  transform: translate(3px, -3px);
 }
 
-/* Responsive Rules */
-@media (min-width: 769px) {
-  .mobile-footer-content p {
-    text-align: right;
-    width: 100%;
+/* Footer Bar */
+.site-footer-bar {
+  text-align: center;
+  padding: 1.5rem 2rem;
+  color: var(--text-muted);
+  border-top: 1px solid var(--card-border);
+  margin-top: 2rem;
+}
+
+.site-footer-bar p {
+  font-size: 0.85rem;
+}
+
+/* ==============================
+   Responsive
+============================== */
+@media (max-width: 768px) {
+  .social-cards-grid {
+    grid-template-columns: 1fr;
   }
-  .mobile-footer-content {
-    flex-direction: row-reverse;
-    justify-content: space-between;
+
+  .social-card {
+    padding: 1.25rem;
+  }
+
+  .social-card-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
   }
 }
