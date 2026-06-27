@@ -15,70 +15,73 @@ const NAV_ITEMS = [
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
-  // Prevent scrolling when menu is open
   useEffect(() => {
-    if (isOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "unset";
-    }
-    return () => { document.body.style.overflow = "unset"; };
-  }, [isOpen]);
+    const handleScroll = () => {
+      if (window.scrollY > 20) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const handleLinkClick = () => {
     setIsOpen(false);
   };
 
   return (
-    <>
-      {/* Floating Controls */}
-      <div className="floating-controls">
-        <ThemeToggle />
-        <button
-          className="fab-menu-btn"
-          onClick={() => setIsOpen(!isOpen)}
-          aria-label="Toggle menu"
-          aria-expanded={isOpen}
-        >
-          {isOpen ? <X size={26} /> : <Menu size={26} />}
-        </button>
-      </div>
+    <header className={`navbar ${scrolled ? "scrolled" : ""}`}>
+      <div className="navbar-container">
+        <a href="#home" className="navbar-logo" onClick={handleLinkClick}>
+          <span>T</span>ANUJ
+        </a>
 
-      {/* Full-Screen Overlay Menu */}
-      <div className={`overlay-menu ${isOpen ? "open" : ""}`}>
-        <div className="overlay-menu-bg"></div>
-        
-        <div className="overlay-content">
-          <nav className="overlay-nav-links">
-            {NAV_ITEMS.map((item, index) => (
-              <a
-                key={item.label}
-                href={item.href}
-                className="overlay-nav-link"
-                style={{ animationDelay: `${index * 0.08}s` }}
-                onClick={handleLinkClick}
-              >
-                {item.label}
-              </a>
-            ))}
-            
-            <a 
-              href="#contact" 
-              className="overlay-nav-cta" 
-              onClick={handleLinkClick}
-              style={{ animationDelay: `${NAV_ITEMS.length * 0.08}s` }}
-            >
-              Hire Me <ArrowUpRight size={32} />
+        {/* Desktop Navigation */}
+        <nav className="navbar-desktop-nav">
+          {NAV_ITEMS.map((item) => (
+            <a key={item.label} href={item.href} className="nav-link">
+              {item.label}
             </a>
-          </nav>
+          ))}
+          <a href="#contact" className="nav-cta">
+            Hire Me <ArrowUpRight className="cta-icon" size={16} />
+          </a>
+        </nav>
 
-          <div className="overlay-footer">
-            <span className="brand-logo"><span>T</span>ANUJ</span>
-            <p>Graphic Designer & Video Editor</p>
-          </div>
+        <div style={{ display: "flex", alignItems: "center", gap: "1rem" }}>
+          <ThemeToggle />
+          <button
+            className="navbar-mobile-toggle"
+            onClick={() => setIsOpen(!isOpen)}
+            aria-label="Toggle menu"
+          >
+            {isOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
         </div>
       </div>
-    </>
+
+      {/* Mobile Drawer Overlay */}
+      <div className={`navbar-mobile-drawer ${isOpen ? "open" : ""}`}>
+        <nav className="mobile-nav-links">
+          {NAV_ITEMS.map((item) => (
+            <a
+              key={item.label}
+              href={item.href}
+              className="mobile-nav-link"
+              onClick={handleLinkClick}
+            >
+              {item.label}
+            </a>
+          ))}
+          <a href="#contact" className="mobile-nav-cta" onClick={handleLinkClick}>
+            Hire Me <ArrowUpRight size={18} />
+          </a>
+        </nav>
+      </div>
+    </header>
   );
 }
