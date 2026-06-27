@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { ArrowDown, Palette, Sparkles, ArrowRight } from "lucide-react";
+import { ArrowDown, Laptop, Sparkles, ArrowRight } from "lucide-react";
 import "./Hero.css";
 
 const ROLES = ["Graphic Designer", "Video Editor", "Brand Strategist"];
@@ -78,7 +78,7 @@ export default function Hero() {
           <div className="visual-inner-ring"></div>
           <div className="visual-cube-box">
             <div className="visual-core-glow">
-              <Palette size={40} className="visual-core-icon" />
+              <Laptop size={40} className="visual-core-icon" />
             </div>
           </div>
           {/* Glowing particle blobs */}
