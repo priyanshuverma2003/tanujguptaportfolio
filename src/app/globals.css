@@ -46,6 +46,9 @@
   * {
     cursor: auto !important; /* Restore default cursor on mobile/touch screens */
   }
+  html {
+    scroll-padding-top: 0;
+  }
 }
 
 html {
