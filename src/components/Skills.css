@@ -88,6 +88,9 @@
   background: linear-gradient(to right, var(--primary), var(--secondary));
   border-radius: 10px;
   box-shadow: 0 0 8px var(--secondary);
+}
+
+.reveal-on-scroll.active .skill-progress-bar {
   animation: fillProgressBar 1.2s forwards cubic-bezier(0.1, 0.8, 0.3, 1);
 }
 

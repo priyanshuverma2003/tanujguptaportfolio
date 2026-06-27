@@ -17,9 +17,6 @@ export default function Home() {
       {/* Floating Navigation Header */}
       <Navbar />
 
-      {/* Social Icons Floating Sidebar */}
-      <SocialBar />
-
       {/* Scroll Sections */}
       <Hero />
       <About />
@@ -27,6 +24,9 @@ export default function Home() {
       <Experience />
       <Projects />
       <Contact />
+
+      {/* Social Icons Floating Sidebar & Mobile Footer */}
+      <SocialBar />
     </main>
   );
 }

@@ -1,8 +1,9 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { ArrowDown, Code, ArrowRight } from "lucide-react";
+import { ArrowDown, Palette, Sparkles, ArrowRight } from "lucide-react";
 import "./Hero.css";
+import AICartoon from "./AICartoon";
 
 const ROLES = ["Graphic Designer", "Video Editor", "Brand Strategist"];
 
@@ -73,12 +74,13 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="hero-visual">
+        <div className="hero-visual hover-target" style={{ position: "relative" }}>
+          <AICartoon />
           <div className="visual-outer-ring"></div>
           <div className="visual-inner-ring"></div>
           <div className="visual-cube-box">
             <div className="visual-core-glow">
-              <Code size={40} className="visual-core-icon" />
+              <Palette size={40} className="visual-core-icon" />
             </div>
           </div>
           {/* Glowing particle blobs */}

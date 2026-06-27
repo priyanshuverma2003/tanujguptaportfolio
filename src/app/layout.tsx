@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Outfit, Fira_Code } from "next/font/google";
 import "./globals.css";
+import ParticlesBackground from "../components/ParticlesBackground";
 
 const outfit = Outfit({
   subsets: ["latin"],
@@ -27,6 +28,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${outfit.variable} ${firaCode.variable}`}>
       <body>
+        <ParticlesBackground />
         <div className="glow-mesh">
           <div className="glow-spot-1"></div>
           <div className="glow-spot-2"></div>

@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { Menu, X, ArrowUpRight } from "lucide-react";
+import ThemeToggle from "./ThemeToggle";
 import "./Navbar.css";
 
 const NAV_ITEMS = [
@@ -51,14 +52,16 @@ export default function Navbar() {
           </a>
         </nav>
 
-        {/* Mobile menu trigger */}
-        <button
-          className="navbar-mobile-toggle"
-          onClick={() => setIsOpen(!isOpen)}
-          aria-label="Toggle menu"
-        >
-          {isOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
+        <div style={{ display: "flex", alignItems: "center", gap: "1rem" }}>
+          <ThemeToggle />
+          <button
+            className="navbar-mobile-toggle"
+            onClick={() => setIsOpen(!isOpen)}
+            aria-label="Toggle menu"
+          >
+            {isOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile Drawer Overlay */}
