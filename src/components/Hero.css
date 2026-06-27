@@ -67,7 +67,7 @@
 .hero-name {
   font-size: 5rem;
   font-weight: 900;
-  color: #fff;
+  color: var(--foreground);
   letter-spacing: -0.03em;
   line-height: 0.95;
   margin-bottom: 1rem;
@@ -84,7 +84,7 @@
   font-family: var(--font-fira-mono), monospace;
   font-size: 1.85rem;
   font-weight: 500;
-  color: #fff;
+  color: var(--foreground);
   margin-bottom: 1.5rem;
 }
 
@@ -161,17 +161,17 @@
 .visual-core-glow {
   width: 90px;
   height: 90px;
-  background: radial-gradient(circle, var(--primary) 0%, rgba(192, 132, 252, 0.2) 60%, transparent 100%);
+  background: radial-gradient(circle, var(--primary) 0%, rgba(var(--primary-rgb), 0.2) 60%, transparent 100%);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 0 40px rgba(192, 132, 252, 0.6);
-  color: #fff;
+  box-shadow: 0 0 40px rgba(var(--primary-rgb), 0.6);
+  color: var(--foreground);
 }
 
 .visual-core-icon {
-  filter: drop-shadow(0 0 10px #fff);
+  filter: drop-shadow(0 0 10px var(--primary));
   animation: pulseIcon 4s ease-in-out infinite;
 }
 
@@ -317,9 +317,11 @@
 @media (max-width: 480px) {
   .hero-name {
     font-size: 3rem;
+    line-height: 1.1;
   }
   .hero-role-wrapper {
     font-size: 1.35rem;
+    line-height: 1.4;
   }
   .hero-cta-group {
     flex-direction: column;

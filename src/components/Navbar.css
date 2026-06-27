@@ -12,10 +12,10 @@
 }
 
 .navbar.scrolled {
-  background: rgba(8, 7, 16, 0.75);
+  background: var(--card-bg);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(192, 132, 252, 0.1);
+  border-bottom: 1px solid var(--card-border);
   height: 70px;
 }
 
@@ -32,7 +32,7 @@
 .navbar-logo {
   font-size: 1.5rem;
   font-weight: 800;
-  color: #fff;
+  color: var(--foreground);
   letter-spacing: 0.1em;
   text-decoration: none;
   transition: opacity var(--transition-fast);
@@ -59,7 +59,7 @@
 }
 
 .nav-link:hover {
-  color: #fff;
+  color: var(--foreground);
 }
 
 .nav-link::after {
@@ -78,9 +78,9 @@
 }
 
 .nav-cta {
-  background: rgba(192, 132, 252, 0.1);
+  background: rgba(var(--primary-rgb), 0.1);
   border: 1px solid var(--primary);
-  color: #fff;
+  color: var(--foreground);
   padding: 0.5rem 1.25rem;
   border-radius: 50px;
   font-size: 0.9rem;
@@ -110,7 +110,7 @@
   display: none;
   background: transparent;
   border: none;
-  color: #fff;
+  color: var(--foreground);
   cursor: pointer;
   z-index: 1001;
 }
@@ -122,7 +122,7 @@
   right: -100%;
   width: 100%;
   height: 100vh;
-  background: rgba(8, 7, 16, 0.98);
+  background: var(--background);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   z-index: 999;

@@ -76,9 +76,9 @@ body::before {
   height: 120%;
   z-index: -2;
   background-image: 
-    radial-gradient(circle at 10% 20%, rgba(192, 132, 252, 0.08) 0%, transparent 40%),
-    radial-gradient(circle at 90% 80%, rgba(34, 211, 238, 0.08) 0%, transparent 40%),
-    radial-gradient(circle at 50% 50%, rgba(8, 7, 16, 1) 0%, rgba(8, 7, 16, 1) 100%);
+    radial-gradient(circle at 10% 20%, rgba(var(--primary-rgb), 0.08) 0%, transparent 40%),
+    radial-gradient(circle at 90% 80%, rgba(var(--secondary-rgb), 0.08) 0%, transparent 40%),
+    radial-gradient(circle at 50% 50%, var(--background) 0%, var(--background) 100%);
   background-size: cover;
   pointer-events: none;
 }
@@ -101,7 +101,7 @@ body::before {
   left: 20%;
   width: 40vw;
   height: 40vw;
-  background: radial-gradient(circle, rgba(192, 132, 252, 0.12) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(var(--primary-rgb), 0.12) 0%, transparent 70%);
   filter: blur(80px);
   animation: floatGlow1 25s infinite alternate ease-in-out;
 }
@@ -112,7 +112,7 @@ body::before {
   right: 15%;
   width: 45vw;
   height: 45vw;
-  background: radial-gradient(circle, rgba(34, 211, 238, 0.1) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(var(--secondary-rgb), 0.1) 0%, transparent 70%);
   filter: blur(80px);
   animation: floatGlow2 30s infinite alternate ease-in-out;
 }
@@ -146,7 +146,7 @@ p {
 .title-reveal {
   font-size: 3.5rem;
   font-weight: 800;
-  background: linear-gradient(135deg, #ffffff 30%, var(--text-muted) 100%);
+  background: linear-gradient(135deg, var(--foreground) 30%, var(--text-muted) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-bottom: 0.5rem;
@@ -158,8 +158,9 @@ p {
   margin-bottom: 1.5rem;
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   gap: 0.75rem;
-  background: linear-gradient(to right, #ffffff, var(--text-muted));
+  background: linear-gradient(to right, var(--foreground), var(--text-muted));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -306,10 +307,7 @@ body {
 
 /* Responsive adjustments */
 @media (max-width: 640px) {
-  .hero-grid {
-    flex-direction: column;
-    align-items: stretch;
-  }
+  /* Added general responsive adjustments if needed */
 }
 
 .reveal-on-scroll {

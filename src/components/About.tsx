@@ -75,10 +75,7 @@ export default function About() {
             <div className="profile-glass-card glass-panel">
               <div className="profile-overlay-circle"></div>
               <div className="profile-header">
-                <div className="profile-avatar-placeholder">
-                  {/* Decorative logo */}
-                  <span className="avatar-letter">T</span>
-                </div>
+
                 <div>
                   <h3 className="profile-name">Tanuj Gupta</h3>
                   <p className="profile-title">Graphic Designer & Video Editor</p>

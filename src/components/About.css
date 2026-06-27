@@ -14,7 +14,7 @@
 
 .about-text-lead {
   font-size: 1.4rem;
-  color: #fff;
+  color: var(--foreground);
   font-weight: 500;
   line-height: 1.5;
   border-left: 3px solid var(--primary);
@@ -51,7 +51,7 @@
 
 .detail-label {
   font-weight: 600;
-  color: #fff;
+  color: var(--foreground);
   margin-right: 0.5rem;
 }
 
@@ -111,7 +111,7 @@
 
 .profile-name {
   font-size: 1.5rem;
-  color: #fff;
+  color: var(--foreground);
   font-weight: 700;
 }
 
@@ -142,8 +142,8 @@
 .stat-num {
   font-size: 1.6rem;
   font-weight: 800;
-  color: #fff;
-  background: linear-gradient(135deg, #fff, var(--primary));
+  color: var(--foreground);
+  background: linear-gradient(135deg, var(--foreground), var(--primary));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
