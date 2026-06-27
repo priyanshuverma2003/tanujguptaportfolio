@@ -29,10 +29,7 @@ export default function RootLayout({
     <html lang="en" className={`${outfit.variable} ${firaCode.variable}`}>
       <body>
         <ParticlesBackground />
-        <div className="glow-mesh">
-          <div className="glow-spot-1"></div>
-          <div className="glow-spot-2"></div>
-        </div>
+
         {children}
       </body>
     </html>
