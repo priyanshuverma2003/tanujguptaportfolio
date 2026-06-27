@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from "react";
 import { Menu, X, ArrowUpRight } from "lucide-react";
-import ThemeToggle from "./ThemeToggle";
 import "./Navbar.css";
 
 const NAV_ITEMS = [
@@ -62,16 +61,11 @@ export default function Navbar() {
               Hire Me <ArrowUpRight className="cta-icon" size={16} />
             </a>
           </nav>
-
-          <div className="desktop-theme-toggle">
-            <ThemeToggle />
-          </div>
         </div>
       </header>
 
       {/* Floating Controls (Mobile Only) */}
       <div className="floating-controls">
-        <ThemeToggle />
         <button
           className="fab-menu-btn"
           onClick={() => setIsOpen(!isOpen)}
