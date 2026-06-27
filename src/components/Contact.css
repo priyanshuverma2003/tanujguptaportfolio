@@ -216,3 +216,27 @@
     max-width: 440px;
   }
 }
+
+@media (max-width: 480px) {
+  .contact-lead-title {
+    font-size: 1.75rem;
+  }
+  .channel-card {
+    padding: 1rem !important;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+  }
+  .channel-details {
+    align-items: center;
+    width: 100%;
+  }
+  .channel-val {
+    word-break: break-word;
+    font-size: 0.95rem;
+  }
+  .channel-link-arrow {
+    display: none;
+  }
+}

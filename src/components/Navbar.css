@@ -174,11 +174,17 @@
 }
 
 /* Media Queries */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .navbar-desktop-nav {
     display: none;
   }
   .navbar-mobile-toggle {
     display: block;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar-container {
+    padding: 0 1rem;
   }
 }
