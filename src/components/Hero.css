@@ -240,14 +240,24 @@
 }
 
 .visual-core-glow {
-  width: 90px;
-  height: 90px;
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
   display: flex;
+  position: relative;
   align-items: center;
   justify-content: center;
   color: var(--foreground);
   margin-bottom: 0.75rem;
+}
+
+.hero-visual {
+  background: radial-gradient(circle at center, #2a0a3c, #000);
+  border-radius: 50%;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .visual-core-icon {
@@ -551,6 +561,16 @@
 /* Hover effect on laptop icon */
 :root.dark .visual-core-glow:hover .visual-core-icon {
   filter: drop-shadow(0 0 20px rgba(192, 132, 252, 0.8));
+}
+
+/* LED glow on hover */
+.visual-core-glow:hover::before {
+  content: "";
+  position: absolute;
+  inset: -6px;
+  border-radius: 50%;
+  box-shadow: 0 0 6px 2px rgba(0, 255, 0, 0.8), 0 0 12px 4px rgba(0, 255, 0, 0.5);
+  z-index: -1;
 }
 
 
