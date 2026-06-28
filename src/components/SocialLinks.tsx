@@ -14,7 +14,7 @@ const SocialLinks: React.FC = () => {
       <a href="https://wa.me/919971091605" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
         <FaWhatsapp size={20} />
       </a>
-      <a href="mailto:tanujgupta@example.com" aria-label="Email">
+      <a href="mailto:tanujgupta1234.tg@gmail.com" aria-label="Email">
         <FaEnvelope size={20} />
       </a>
     </div>
