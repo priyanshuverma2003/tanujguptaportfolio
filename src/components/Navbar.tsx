@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { Menu, X, ArrowUpRight } from "lucide-react";
+import { Menu, X, ArrowUpRight, Lightbulb } from "lucide-react";
 import "./Navbar.css";
 
 const NAV_ITEMS = [
@@ -60,6 +60,9 @@ export default function Navbar() {
             <a href="#contact" className="nav-cta">
               Hire Me <ArrowUpRight className="cta-icon" size={16} />
             </a>
+            <a href="#ideas" className="nav-cta">
+              <Lightbulb className="cta-icon" size={16} /> Ideas
+            </a>
           </nav>
         </div>
       </header>
@@ -94,13 +97,21 @@ export default function Navbar() {
               </a>
             ))}
             
-            <a 
-              href="#contact" 
-              className="overlay-nav-cta" 
+            <a
+              href="#contact"
+              className="overlay-nav-cta"
               onClick={handleLinkClick}
               style={{ animationDelay: `${NAV_ITEMS.length * 0.08}s` }}
             >
               Hire Me <ArrowUpRight size={32} />
+            </a>
+            <a
+              href="#ideas"
+              className="overlay-nav-cta"
+              onClick={handleLinkClick}
+              style={{ animationDelay: `${(NAV_ITEMS.length + 1) * 0.08}s` }}
+            >
+              <Lightbulb size={32} className="cta-icon" /> Ideas
             </a>
           </nav>
 
