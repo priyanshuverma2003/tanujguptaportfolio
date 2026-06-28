@@ -15,6 +15,9 @@ export default function ThemeToggle() {
       setTheme(savedTheme);
       if (savedTheme === "light") {
         document.documentElement.classList.add("light");
+      } else {
+        // Ensure dark mode has no "light" class
+        document.documentElement.classList.remove("light");
       }
     } else {
       // Check system preference
@@ -22,19 +25,25 @@ export default function ThemeToggle() {
       if (prefersLight) {
         setTheme("light");
         document.documentElement.classList.add("light");
+      } else {
+        // Default dark, ensure no "light" class
+        document.documentElement.classList.remove("light");
       }
     }
   }, []);
 
   const toggleTheme = () => {
+    console.log('Toggle clicked, current theme:', theme);
     const nextTheme = theme === "dark" ? "light" : "dark";
+    console.log('Next theme will be:', nextTheme);
     setTheme(nextTheme);
     localStorage.setItem("theme", nextTheme);
-
     if (nextTheme === "light") {
       document.documentElement.classList.add("light");
+      console.log('Added light class');
     } else {
       document.documentElement.classList.remove("light");
+      console.log('Removed light class');
     }
   };
 
@@ -46,16 +55,13 @@ export default function ThemeToggle() {
     <button
       className="theme-toggle-btn"
       onClick={toggleTheme}
-      aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} theme`}
+      aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} mode`}
     >
-      <div className="icon-container">
-        {theme === "dark" ? (
-          <Sun size={20} className="sun-icon" />
-        ) : (
-          <Moon size={20} className="moon-icon" />
-        )}
-        <span className="theme-label">{theme === "dark" ? "Light Mode" : "Dark Mode"}</span>
-      </div>
+      {theme === "dark" ? (
+        <Moon size={24} className="moon-icon" />
+      ) : (
+        <Sun size={24} className="sun-icon" />
+      )}
     </button>
   );
 }

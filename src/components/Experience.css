@@ -76,7 +76,7 @@
 .timeline-role {
   font-size: 1.35rem;
   font-weight: 700;
-  color: #fff;
+  color: var(--foreground);
   letter-spacing: -0.01em;
 }
 
@@ -91,8 +91,8 @@
   display: inline-flex;
   align-items: center;
   gap: 0.45rem;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
   padding: 0.35rem 0.85rem;
   border-radius: 50px;
   font-size: 0.8rem;

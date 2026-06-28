@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { ArrowDown, Laptop, Sparkles, ArrowRight } from "lucide-react";
+import { ArrowDown, Laptop, Sparkles, ArrowRight, Palette, Video, Film } from "lucide-react";
 import "./Hero.css";
 
 const ROLES = ["Graphic Designer", "Video Editor", "Brand Strategist"];
@@ -74,17 +74,14 @@ export default function Hero() {
         </div>
 
         <div className="hero-visual hover-target" style={{ position: "relative" }}>
-          <div className="visual-outer-ring"></div>
-          <div className="visual-inner-ring"></div>
-          <div className="visual-cube-box">
-            <div className="visual-core-glow">
-              <Laptop size={40} className="visual-core-icon" />
-            </div>
+        <div className="visual-outer-ring"></div>
+        <div className="visual-inner-ring"></div>
+        <div className="visual-cube-box">
+          <div className="visual-core-glow">
+            <Laptop size={40} className="visual-core-icon" />
           </div>
-          {/* Glowing particle blobs */}
-          <div className="blob blob-1"></div>
-          <div className="blob blob-2"></div>
         </div>
+      </div>
       </div>
 
       <a href="#about" className="scroll-down-indicator" aria-label="Scroll Down">

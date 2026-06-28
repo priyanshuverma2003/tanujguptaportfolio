@@ -127,8 +127,8 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
   margin-bottom: 2rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  border-top: 1px solid var(--card-border);
+  border-bottom: 1px solid var(--card-border);
   padding: 1.5rem 0;
 }
 

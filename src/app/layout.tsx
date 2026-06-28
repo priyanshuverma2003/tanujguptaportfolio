@@ -30,7 +30,6 @@ export default function RootLayout({
     <html lang="en" className={`${outfit.variable} ${firaCode.variable}`}>
       <body>
         <ParticlesBackground />
-        <ThemeToggle />
         
         {children}
       </body>
