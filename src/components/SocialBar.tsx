@@ -21,26 +21,6 @@ const SOCIAL_LINKS = [
 export default function SocialBar() {
   return (
     <>
-      {/* Floating Sidebar */}
-      <div className="social-sidebar">
-        <div className="social-sidebar-line"></div>
-        <div className="social-sidebar-links">
-          {SOCIAL_LINKS.map((link, idx) => (
-            <a
-              key={idx}
-              href={link.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="social-icon-link"
-              aria-label={link.label}
-            >
-              {link.icon}
-              <span className="tooltip">{link.label}</span>
-            </a>
-          ))}
-        </div>
-        <div className="social-sidebar-line"></div>
-      </div>
 
       {/* Mobile Social Links Section (Visible on Mobile only, before footer) */}
       <div className="mobile-socials-container">
