@@ -3,6 +3,8 @@
 import { useEffect, useState } from "react";
 import { ArrowDown, Laptop, Sparkles, ArrowRight, Palette, Video, Film } from "lucide-react";
 import "./Hero.css";
+import SocialLinks from "./SocialLinks";
+import "./Hero.css";
 
 const ROLES = ["Graphic Designer", "Video Editor", "Brand Strategist"];
 
@@ -77,10 +79,13 @@ export default function Hero() {
         <div className="visual-outer-ring"></div>
         <div className="visual-inner-ring"></div>
         <div className="visual-cube-box">
-          <div className="visual-core-glow">
-            <Laptop size={40} className="visual-core-icon" />
-          </div>
-        </div>
+  <div className="visual-core-glow">
+    <Laptop className="visual-core-icon" size={70} />
+  </div>
+  <div className="social-desktop">
+    <SocialLinks />
+  </div>
+</div>
       </div>
       </div>
 
@@ -90,6 +95,10 @@ export default function Hero() {
         </span>
         <ArrowDown size={18} />
       </a>
+      {/* Mobile social links placed after the hero section */}
+      <div className="social-mobile">
+        <SocialLinks />
+      </div>
     </section>
   );
 }
