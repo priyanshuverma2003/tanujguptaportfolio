@@ -80,7 +80,7 @@ export default function Hero() {
         <div className="visual-inner-ring"></div>
         <div className="visual-cube-box">
   <div className="visual-core-glow">
-    <Laptop className="visual-core-icon" size={70} />
+    <Laptop className="visual-core-icon" size={46} />
   </div>
 </div>
       </div>
