@@ -66,13 +66,13 @@ export default function Contact() {
             </p>
 
             <div className="contact-channels">
-              <a href="mailto:tanujgupta@example.com" className="channel-card glass-panel">
+              <a href="mailto:tanujgupta1234.tg@gmail.com" className="channel-card glass-panel">
                 <div className="channel-icon-box purple-accent">
                   <Mail size={20} />
                 </div>
                 <div className="channel-details">
                   <span className="channel-title">Email Me</span>
-                  <span className="channel-val">tanujgupta@example.com</span>
+                  <span className="channel-val">tanujgupta1234.tg@gmail.com</span>
                 </div>
                 <ArrowUpRight className="channel-link-arrow" size={16} />
               </a>
