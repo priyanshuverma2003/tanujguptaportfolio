@@ -48,9 +48,6 @@ export default function Navbar() {
     <>
       <header className={`navbar ${scrolled ? "scrolled" : ""}`}>
         <div className="navbar-container">
-          <a href="#home" className="navbar-logo" onClick={handleLinkClick}>
-            <span>T</span>ANUJ
-          </a>
 
           {/* Desktop Navigation */}
           <nav className="navbar-desktop-nav">
@@ -62,9 +59,8 @@ export default function Navbar() {
             <a href="#contact" className="nav-cta">
               Hire Me <ArrowUpRight className="cta-icon" size={16} />
             </a>
-            <div className="navbar-socials">
-              <SocialLinks />
-            </div>
+
+
             <ThemeToggle />
           </nav>
         </div>
@@ -113,7 +109,6 @@ export default function Navbar() {
           </nav>
 
           <div className="overlay-footer">
-            <span className="brand-logo"><span>T</span>ANUJ</span>
             <p>Graphic Designer & Video Editor</p>
           </div>
         </div>
