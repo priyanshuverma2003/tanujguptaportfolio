@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Outfit, Fira_Code } from "next/font/google";
 import "./globals.css";
 import ParticlesBackground from "../components/ParticlesBackground";
+import ThemeToggle from "../components/ThemeToggle";
 
 const outfit = Outfit({
   subsets: ["latin"],
@@ -29,7 +30,8 @@ export default function RootLayout({
     <html lang="en" className={`${outfit.variable} ${firaCode.variable}`}>
       <body>
         <ParticlesBackground />
-
+        <ThemeToggle />
+        
         {children}
       </body>
     </html>
