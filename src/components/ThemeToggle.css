@@ -30,6 +30,7 @@
 
 .icon-container {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   animation: rotateIn 0.3s ease-out;
@@ -53,5 +54,25 @@
   to {
     transform: rotate(0deg) scale(1);
     opacity: 1;
+  }
+}
+
+/* Theme label */
+.theme-label {
+  margin-top: 4px;
+  font-size: 0.75rem;
+  color: var(--foreground);
+  font-family: var(--font-outfit), sans-serif;
+}
+
+/* Mobile tweaks */
+@media (max-width: 480px) {
+  .theme-toggle-btn {
+    width: 32px;
+    height: 32px;
+  }
+  .theme-label {
+    font-size: 0.65rem;
+    margin-top: 2px;
   }
 }

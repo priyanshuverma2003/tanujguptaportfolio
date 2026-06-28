@@ -54,6 +54,7 @@ export default function ThemeToggle() {
         ) : (
           <Moon size={20} className="moon-icon" />
         )}
+        <span className="theme-label">{theme === "dark" ? "Light Mode" : "Dark Mode"}</span>
       </div>
     </button>
   );
