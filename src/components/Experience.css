@@ -2,14 +2,14 @@
   position: relative;
   max-width: 900px;
   margin: 3rem auto 0;
-  padding-left: 3rem;
+  padding-left: 4rem;
 }
 
 .timeline-track {
   position: absolute;
   top: 0;
   bottom: 0;
-  left: 11px; /* Center with the 24px wide node (12px line - half border) */
+  left: 15px; /* Shift line right to provide clearance */
   width: 2px;
   background: linear-gradient(
     to bottom,
