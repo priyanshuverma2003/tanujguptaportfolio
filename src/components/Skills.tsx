@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Palette, Video, Wand2 } from "lucide-react";
 import "./Skills.css";
+import ThreeDWrapper from "./ThreeDWrapper";
 
 const SKILL_CATEGORIES = [
   {
@@ -67,51 +68,52 @@ export default function Skills() {
 
   const activeCategory = SKILL_CATEGORIES.find((cat) => cat.id === activeTab);
 
-  return (
-    <section id="skills" className="section" ref={sectionRef}>
-      <div className="section-content">
-        <div className="reveal-on-scroll">
-          <h2 className="section-title">
-            <Palette className="section-title-icon" size={28} /> Creative Toolkit
-          </h2>
-        </div>
-
-        <div className="skills-container reveal-on-scroll">
-          {/* Tab Selector */}
-          <div className="skills-tabs">
-            {SKILL_CATEGORIES.map((category) => (
-              <button
-                key={category.id}
-                className={`skill-tab-btn ${activeTab === category.id ? "active" : ""}`}
-                onClick={() => setActiveTab(category.id)}
-              >
-                {category.icon}
-                <span>{category.label}</span>
-              </button>
-            ))}
+  
+    <ThreeDWrapper>
+      <section id="skills" className="section" ref={sectionRef}>
+        <div className="section-content">
+          <div className="reveal-on-scroll">
+            <h2 className="section-title">
+              <Palette className="section-title-icon" size={28} /> Creative Toolkit
+            </h2>
           </div>
 
-          {/* Tab Panels */}
-          <div className="skills-panel glass-panel">
-            <div className="skills-grid">
-              {activeCategory?.skills.map((skill, idx) => (
-                <div key={idx} className="skill-card">
-                  <div className="skill-info">
-                    <span className="skill-name">{skill.name}</span>
-                    <span className="skill-percentage">{skill.level}%</span>
-                  </div>
-                  <div className="skill-progress-track">
-                    <div
-                      className="skill-progress-bar"
-                      style={{ "--target-width": `${skill.level}%` } as React.CSSProperties}
-                    ></div>
-                  </div>
-                </div>
+          <div className="skills-container reveal-on-scroll">
+            {/* Tab Selector */}
+            <div className="skills-tabs">
+              {SKILL_CATEGORIES.map((category) => (
+                <button
+                  key={category.id}
+                  className={`skill-tab-btn ${activeTab === category.id ? "active" : ""}`}
+                  onClick={() => setActiveTab(category.id)}
+                >
+                  {category.icon}
+                  <span>{category.label}</span>
+                </button>
               ))}
+            </div>
+
+            {/* Tab Panels */}
+            <div className="skills-panel glass-panel">
+              <div className="skills-grid">
+                {activeCategory?.skills.map((skill, idx) => (
+                  <div key={idx} className="skill-card">
+                    <div className="skill-info">
+                      <span className="skill-name">{skill.name}</span>
+                      <span className="skill-percentage">{skill.level}%</span>
+                    </div>
+                    <div className="skill-progress-track">
+                      <div
+                        className="skill-progress-bar"
+                        style={{ "--target-width": `${skill.level}%` } as React.CSSProperties}
+                      ></div>
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-  );
+      </section>
+    </ThreeDWrapper>
 }

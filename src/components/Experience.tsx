@@ -3,6 +3,7 @@
 import { useEffect, useRef } from "react";
 import { Briefcase, Calendar, Award } from "lucide-react";
 import "./Experience.css";
+import ThreeDWrapper from "./ThreeDWrapper";
 
 const TIMELINE_ITEMS = [
   {
@@ -59,39 +60,41 @@ export default function Experience() {
   }, []);
 
   return (
-    <section id="experience" className="section" ref={sectionRef}>
-      <div className="section-content">
-        <div className="reveal-on-scroll">
-          <h2 className="section-title">
-            <Award className="section-title-icon" size={28} /> Career Journey
-          </h2>
-        </div>
+    <ThreeDWrapper>
+      <section id="experience" className="section" ref={sectionRef}>
+        <div className="section-content">
+          <div className="reveal-on-scroll">
+            <h2 className="section-title">
+              <Award className="section-title-icon" size={28} /> Career Journey
+            </h2>
+          </div>
 
-        <div className="experience-timeline">
-          <div className="timeline-track"></div>
+          <div className="experience-timeline">
+            <div className="timeline-track"></div>
 
-          {TIMELINE_ITEMS.map((item, idx) => (
-            <div key={idx} className="timeline-item reveal-on-scroll">
-              <div className="timeline-node">
-                <Briefcase size={16} />
-              </div>
-              <div className="timeline-card glass-panel">
-                <div className="timeline-header">
-                  <div>
-                    <h3 className="timeline-role">{item.role}</h3>
-                    <h4 className="timeline-company">{item.company}</h4>
-                  </div>
-                  <div className="timeline-date-badge">
-                    <Calendar size={14} />
-                    <span>{item.period}</span>
-                  </div>
+            {TIMELINE_ITEMS.map((item, idx) => (
+              <div key={idx} className="timeline-item reveal-on-scroll">
+                <div className="timeline-node">
+                  <Briefcase size={16} />
                 </div>
-                <p className="timeline-desc">{item.desc}</p>
+                <div className="timeline-card glass-panel">
+                  <div className="timeline-header">
+                    <div>
+                      <h3 className="timeline-role">{item.role}</h3>
+                      <h4 className="timeline-company">{item.company}</h4>
+                    </div>
+                    <div className="timeline-date-badge">
+                      <Calendar size={14} />
+                      <span>{item.period}</span>
+                    </div>
+                  </div>
+                  <p className="timeline-desc">{item.desc}</p>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </ThreeDWrapper>
   );
 }

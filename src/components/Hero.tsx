@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { ArrowDown, Laptop, Sparkles, ArrowRight, Palette, Video, Film } from "lucide-react";
 import "./Hero.css";
 import SocialLinks from "./SocialLinks";
+import ThreeDWrapper from "./ThreeDWrapper";
 import "./Hero.css";
 
 const ROLES = ["Graphic Designer", "Video Editor", "Brand Strategist"];
@@ -42,7 +43,7 @@ export default function Hero() {
   }, [displayText, isDeleting, roleIdx, typingSpeed]);
 
   return (
-    <section id="home" className="hero-section">
+    <ThreeDWrapper><section id="home" className="hero-section">
       <div className="hero-grid">
         <div className="hero-info">
           <div className="hero-badge">
