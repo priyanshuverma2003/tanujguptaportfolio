@@ -488,6 +488,10 @@
 
 /* Responsive Design styling */
 @media (max-width: 1024px) {
+  .hero-section {
+    padding-top: 8rem;
+    min-height: auto;
+  }
   .hero-name {
     font-size: 4rem;
   }
@@ -537,6 +541,9 @@
     width: 100%;
     justify-content: center;
   }
+  .hero-badge {
+    margin-bottom: 2.5rem;
+  }
 }
 
 /* Light Mode overrides for the graphic rings & laptop visual */
@@ -556,7 +563,7 @@
 }
 
 :root.light .visual-core-icon {
-  color: var(--primary);
+  color: #8b9dc3;
   filter: drop-shadow(0 0 10px rgba(139, 92, 246, 0.4));
   transition: filter 0.3s ease;
 }

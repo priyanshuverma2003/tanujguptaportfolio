@@ -42,6 +42,26 @@ export default function SocialBar() {
         <div className="social-sidebar-line"></div>
       </div>
 
+      {/* Mobile Social Links Section (Visible on Mobile only, before footer) */}
+      <div className="mobile-socials-container">
+        <h3 className="mobile-socials-title">Let's Connect</h3>
+        <div className="mobile-socials-links">
+          {SOCIAL_LINKS.map((link, idx) => (
+            <a
+              key={idx}
+              href={link.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mobile-social-btn"
+              aria-label={link.label}
+            >
+              {link.icon}
+              <span className="mobile-social-label">{link.label}</span>
+            </a>
+          ))}
+        </div>
+      </div>
+
       {/* Footer */}
       <footer className="site-footer-bar">
         <p>© {new Date().getFullYear()} Tanuj Gupta. All rights reserved.</p>

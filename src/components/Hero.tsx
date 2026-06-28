@@ -82,9 +82,6 @@ export default function Hero() {
   <div className="visual-core-glow">
     <Laptop className="visual-core-icon" size={70} />
   </div>
-  <div className="social-desktop">
-    <SocialLinks />
-  </div>
 </div>
       </div>
       </div>
@@ -95,10 +92,6 @@ export default function Hero() {
         </span>
         <ArrowDown size={18} />
       </a>
-      {/* Mobile social links placed after the hero section */}
-      <div className="social-mobile">
-        <SocialLinks />
-      </div>
     </section>
   );
 }

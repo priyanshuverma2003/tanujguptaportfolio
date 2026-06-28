@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X, ArrowUpRight } from "lucide-react";
 import ThemeToggle from "./ThemeToggle";
+import SocialLinks from "./SocialLinks";
 import "./Navbar.css";
 
 const NAV_ITEMS = [
@@ -61,6 +62,9 @@ export default function Navbar() {
             <a href="#contact" className="nav-cta">
               Hire Me <ArrowUpRight className="cta-icon" size={16} />
             </a>
+            <div className="navbar-socials">
+              <SocialLinks />
+            </div>
             <ThemeToggle />
           </nav>
         </div>
