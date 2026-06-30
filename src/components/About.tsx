@@ -58,14 +58,14 @@ export default function About() {
                 <Briefcase className="detail-icon" size={18} />
                 <div>
                   <span className="detail-label">Experience:</span>
-                  <span className="detail-val">6+ Years (Design & Video)</span>
+                  <span className="detail-val">3+ Years (Design & Video)</span>
                 </div>
               </div>
               <div className="detail-item">
                 <GraduationCap className="detail-icon" size={18} />
                 <div>
                   <span className="detail-label">Education:</span>
-                  <span className="detail-val">B.Com, University of Delhi</span>
+                  <span className="detail-val">AAIP-VFX (Arena Animation, Saket)</span>
                 </div>
               </div>
             </div>
