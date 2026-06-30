@@ -5,7 +5,7 @@ import { ArrowDown, Laptop, Sparkles, ArrowRight, Palette, Video, Film } from "l
 import "./Hero.css";
 import SocialLinks from "./SocialLinks";
 import ThreeDWrapper from "./ThreeDWrapper";
-import "./Hero.css";
+// duplicate import removed
 
 const ROLES = ["Graphic Designer", "Video Editor", "Brand Strategist"];
 
@@ -42,13 +42,14 @@ export default function Hero() {
     return () => clearTimeout(timer);
   }, [displayText, isDeleting, roleIdx, typingSpeed]);
 
-  return (
-    <ThreeDWrapper><section id="home" className="hero-section">
+return (
+  <ThreeDWrapper>
+    <section id="home" className="hero-section">
       <div className="hero-grid">
         <div className="hero-info">
           <div className="hero-badge">
             <span className="badge-pulse"></span>
-            <span>Available for freelance & full-time</span>
+            <span>Available for freelance &amp; full-time</span>
           </div>
 
           <h2 className="hero-greeting">Hello, I'm</h2>
@@ -77,14 +78,14 @@ export default function Hero() {
         </div>
 
         <div className="hero-visual hover-target" style={{ position: "relative" }}>
-        <div className="visual-outer-ring"></div>
-        <div className="visual-inner-ring"></div>
-        <div className="visual-cube-box">
-  <div className="visual-core-glow">
-    <Laptop className="visual-core-icon" size={46} />
-  </div>
-</div>
-      </div>
+          <div className="visual-outer-ring"></div>
+          <div className="visual-inner-ring"></div>
+          <div className="visual-cube-box">
+            <div className="visual-core-glow">
+              <Laptop className="visual-core-icon" size={46} />
+            </div>
+          </div>
+        </div>
       </div>
 
       <a href="#about" className="scroll-down-indicator" aria-label="Scroll Down">
@@ -94,5 +95,6 @@ export default function Hero() {
         <ArrowDown size={18} />
       </a>
     </section>
-  );
+  </ThreeDWrapper>
+);
 }

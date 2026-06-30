@@ -68,7 +68,7 @@ export default function Skills() {
 
   const activeCategory = SKILL_CATEGORIES.find((cat) => cat.id === activeTab);
 
-  
+  return (
     <ThreeDWrapper>
       <section id="skills" className="section" ref={sectionRef}>
         <div className="section-content">
@@ -116,4 +116,5 @@ export default function Skills() {
         </div>
       </section>
     </ThreeDWrapper>
+  );
 }
