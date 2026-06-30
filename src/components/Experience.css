@@ -31,9 +31,9 @@
 
 .timeline-node {
   position: absolute;
-  left: -3rem; /* Align perfectly with the track line */
+  left: -12px; /* Align node with the vertical line */
   top: 24px;
-  transform: translateX(11px);
+  /* No extra translate needed */
   width: 24px;
   height: 24px;
   border-radius: 50%;
@@ -58,6 +58,7 @@
 
 .timeline-card {
   padding: 2rem;
+  margin-left: 2rem; /* Shift content right away from vertical line */
   transition: transform var(--transition-normal);
 }
 
