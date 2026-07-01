@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react";
+"use client";
 import "./ThreeDWrapper.css";
 
 type Props = {

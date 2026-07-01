@@ -9,7 +9,7 @@
   position: absolute;
   top: 0;
   bottom: 0;
-  left: 12px; /* Position line centrally under node */
+  left: 16px; /* Shift line slightly right to avoid overlapping icons */
   width: 2px;
   background: linear-gradient(
     to bottom,
@@ -31,9 +31,8 @@
 
 .timeline-node {
   position: absolute;
-  left: -12px; /* Align node with the vertical line */
+  left: -16px; /* Align node with the shifted vertical line */
   top: 24px;
-  /* No extra translate needed */
   width: 24px;
   height: 24px;
   border-radius: 50%;
@@ -113,10 +112,10 @@
     padding-left: 2rem;
   }
   .timeline-track {
-    left: 7px;
+    left: 11px; /* Align line with shifted node on mobile */
   }
   .timeline-node {
-    left: -2rem;
+    left: -18px; /* Align node with the shifted vertical line on mobile */
     top: 20px;
     width: 16px;
     height: 16px;
