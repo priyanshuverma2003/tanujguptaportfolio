@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { Mail, Send, MessageSquare, Phone, ArrowUpRight } from "lucide-react";
+import { Mail, Send, MessageSquare, Phone, ArrowUpRight, Linkedin, Palette } from "lucide-react";
 import "./Contact.css";
 
 export default function Contact() {
@@ -88,20 +88,20 @@ export default function Contact() {
                 <ArrowUpRight className="channel-link-arrow" size={16} />
               </a>
 
-              <a href="https://www.linkedin.com/in/tanujgupta" className="channel-card glass-panel" target="_blank" rel="noopener noreferrer">
-                <div className="channel-icon-box blue-accent">
-                  <MessageSquare size={20} />
-                </div>
-                <div className="channel-details">
-                  <span className="channel-title">LinkedIn</span>
-                  <span className="channel-val">tanujgupta</span>
-                </div>
-                <ArrowUpRight className="channel-link-arrow" size={16} />
-              </a>
+              <a href="https://www.linkedin.com/in/tanujgupta" className="channel-card glass-panel linkedin-card" target="_blank" rel="noopener noreferrer">
+                  <div className="channel-icon-box blue-accent">
+                    <Linkedin size={20} />
+                  </div>
+                  <div className="channel-details">
+                    <span className="channel-title">LinkedIn</span>
+                    <span className="channel-val">tanujgupta</span>
+                  </div>
+                  <ArrowUpRight className="channel-link-arrow" size={16} />
+                </a>
 
               <a href="https://www.behance.net/tanujgupta" className="channel-card glass-panel" target="_blank" rel="noopener noreferrer">
                 <div className="channel-icon-box pink-accent">
-                  <Send size={20} />
+                    <Palette size={20} />
                 </div>
                 <div className="channel-details">
                   <span className="channel-title">Behance</span>
