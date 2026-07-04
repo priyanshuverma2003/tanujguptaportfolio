@@ -1,7 +1,8 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { Mail, Send, MessageSquare, Phone, ArrowUpRight, Linkedin, Palette } from "lucide-react";
+import { Send, MessageSquare, ArrowUpRight, Palette } from "lucide-react";
+import { FaEnvelope, FaPhone, FaLinkedin, FaBehance } from "react-icons/fa";
 import "./Contact.css";
 // Updated LinkedIn & Behance cards for better visual consistency
 
@@ -69,7 +70,7 @@ export default function Contact() {
             <div className="contact-channels">
               <a href="mailto:tanujgupta1234.tg@gmail.com" className="channel-card glass-panel">
                 <div className="channel-icon-box purple-accent">
-                  <Mail size={20} />
+                  <FaEnvelope size={20} />
                 </div>
                 <div className="channel-details">
                   <span className="channel-title">Email Me</span>
@@ -79,19 +80,19 @@ export default function Contact() {
               </a>
 
               <a href="tel:+919971091605" className="channel-card glass-panel">
-                <div className="channel-icon-box cyan-accent">
-                  <Phone size={20} />
-                </div>
-                <div className="channel-details">
-                  <span className="channel-title">Call / WhatsApp</span>
-                  <span className="channel-val">+91 99710 91605</span>
-                </div>
+                 <div className="channel-icon-box purple-accent">
+                   <FaPhone size={20} />
+                 </div>
+                 <div className="channel-details">
+                   <span className="channel-title">Call / WhatsApp</span>
+                   <span className="channel-val">+91 99710 91605</span>
+                 </div>
                 <ArrowUpRight className="channel-link-arrow" size={16} />
               </a>
 
               <a href="https://www.linkedin.com/in/tanujgupta" className="channel-card glass-panel linkedin-card" target="_blank" rel="noopener noreferrer">
                   <div className="channel-icon-box blue-accent">
-                    <Linkedin size={20} />
+                    <FaLinkedin size={20} />
                   </div>
                   <div className="channel-details">
                     <span className="channel-title">LinkedIn</span>
@@ -101,9 +102,9 @@ export default function Contact() {
                 </a>
 
               <a href="https://www.behance.net/tanujgupta" className="channel-card glass-panel" target="_blank" rel="noopener noreferrer">
-                <div className="channel-icon-box pink-accent">
-                    <Palette size={20} />
-                </div>
+                 <div className="channel-icon-box purple-accent">
+                   <FaBehance size={20} />
+                 </div>
                 <div className="channel-details">
                   <span className="channel-title">Behance</span>
                   <span className="channel-val">tanujgupta</span>
