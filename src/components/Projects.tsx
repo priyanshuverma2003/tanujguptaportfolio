@@ -6,6 +6,7 @@ import "./Projects.css";
 import brandImg from "../assets/highlights/brand_identity.jpg";
 import socialImg from "../assets/highlights/social_media.jpg";
 import videoImg from "../assets/highlights/video_production.jpg";
+import freelanceImg from "../assets/highlights/freelance_creative_works.jpg";
 
 
 const BehanceIcon = () => (
@@ -47,6 +48,7 @@ const HERO_IMAGES = [
   brandImg,
   socialImg,
   videoImg,
+  freelanceImg,
 ];
 
 export default function Projects() {
