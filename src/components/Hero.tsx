@@ -82,7 +82,7 @@ return (
           <div className="visual-inner-ring"></div>
           <div className="visual-cube-box">
             <div className="visual-core-glow">
-               <ArrowLeft className="visual-core-icon arrow-left" size={28} />
+              <Laptop className="visual-core-icon" size={46} />
             </div>
           </div>
         </div>

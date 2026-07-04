@@ -62,7 +62,7 @@ export default function Projects() {
   }, []);
 
   return (
-    <>
+    <section id="projects" className="section" ref={sectionRef}>
       <div className="section-content">
         <div className="reveal-on-scroll">
           <h2 className="section-title">
@@ -111,6 +111,6 @@ export default function Projects() {
           ))}
         </div>
       </div>
-    </>
+    </section>
   );
 }

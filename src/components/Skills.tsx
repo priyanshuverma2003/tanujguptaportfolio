@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Palette, Video, Wand2 } from "lucide-react";
 import "./Skills.css";
-import ThreeDWrapper from "./ThreeDWrapper";
+
 
 const SKILL_CATEGORIES = [
   {
@@ -69,7 +69,7 @@ export default function Skills() {
   const activeCategory = SKILL_CATEGORIES.find((cat) => cat.id === activeTab);
 
   return (
-    <ThreeDWrapper>
+    <>
       <section id="skills" className="section" ref={sectionRef}>
         <div className="section-content">
           <div className="reveal-on-scroll">
@@ -115,6 +115,6 @@ export default function Skills() {
           </div>
         </div>
       </section>
-    </ThreeDWrapper>
+    </>
   );
 }

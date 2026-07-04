@@ -4,6 +4,7 @@ import "./globals.css";
 import ParticlesBackground from "../components/ParticlesBackground";
 import ThemeToggle from "../components/ThemeToggle";
 import Navbar from "../components/Navbar";
+import BackToTop from "../components/BackToTop";
 
 const outfit = Outfit({
   subsets: ["latin"],
@@ -34,6 +35,7 @@ export default function RootLayout({
         <Navbar />
         
         {children}
+        <BackToTop />
       </body>
     </html>
   );
