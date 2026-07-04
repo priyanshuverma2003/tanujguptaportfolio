@@ -3,6 +3,9 @@
 import { useEffect, useRef } from "react";
 import { Palette, ExternalLink } from "lucide-react";
 import "./Projects.css";
+import brandImg from "../assets/highlights/brand_identity.jpg";
+import socialImg from "../assets/highlights/social_media.jpg";
+import videoImg from "../assets/highlights/video_production.jpg";
 
 
 const BehanceIcon = () => (
@@ -11,21 +14,21 @@ const BehanceIcon = () => (
 
 const PROJECTS_DATA = [
   {
-    title: "Brand Identity — Elanpro & T10",
+    title: "Brand Identity",
     desc: "Complete brand identity systems including logo design, color palettes, typography, and social media guidelines for Elanpro and T10 at Scroll Mantra.",
     tech: ["Illustrator", "Photoshop", "Branding", "Logo Design"],
     demoUrl: "https://www.behance.net/tanujgupta",
     gradient: "linear-gradient(135deg, #a855f7 0%, #06b6d4 100%)",
   },
   {
-    title: "Social Media Campaign — Shiprocket & Panasonic",
+    title: "Social Media Campaign",
     desc: "Designed high-impact social media creatives, stories, and reels for Shiprocket and Panasonic, driving engagement and brand consistency across digital platforms.",
     tech: ["Photoshop", "After Effects", "Premiere Pro", "Social Media"],
     demoUrl: "https://www.behance.net/tanujgupta",
     gradient: "linear-gradient(135deg, #3b82f6 0%, #10b981 100%)",
   },
   {
-    title: "Video Production — Niyat Films",
+    title: "Video Production",
     desc: "Produced advertisement videos, YouTube content, Instagram reels and stories for premium clients including Label.m, Alcis, Exude, and DP World.",
     tech: ["Premiere Pro", "After Effects", "Color Grading", "Motion Graphics"],
     demoUrl: "https://www.behance.net/tanujgupta",
@@ -38,6 +41,12 @@ const PROJECTS_DATA = [
     demoUrl: "https://www.behance.net/tanujgupta",
     gradient: "linear-gradient(135deg, #8b5cf6 0%, #ec4899 100%)",
   },
+];
+
+const HERO_IMAGES = [
+  "/brand_identity.jpg",
+  "/social_media.jpg",
+  "/video_production.jpg",
 ];
 
 export default function Projects() {
@@ -74,7 +83,12 @@ export default function Projects() {
           {PROJECTS_DATA.map((project, idx) => (
             <div key={idx} className="project-card glass-panel">
               {/* Project Preview visual banner */}
-              <div className="project-preview-banner" style={{ background: project.gradient }}>
+              <div className="project-preview-banner" style={{
+                  backgroundImage: `url(${HERO_IMAGES[idx] || project.gradient})`,
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                  backgroundRepeat: 'no-repeat',
+                }}>
                 <div className="preview-mesh"></div>
                 <Palette className="preview-icon" size={48} />
               </div>

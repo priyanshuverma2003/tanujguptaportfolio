@@ -56,9 +56,4 @@
 }
 
 /* Hide cursor on small/touch screens */
-@media (max-width: 1024px) {
-  .custom-cursor-dot,
-  .custom-cursor-ring {
-    display: none !important;
-  }
-}
+
