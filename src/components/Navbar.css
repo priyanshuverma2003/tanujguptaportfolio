@@ -286,7 +286,7 @@
 @media (max-width: 1024px) {
   /* Hide Desktop Navbar */
   .navbar {
-    display: flex; /* always show navbar */
+    display: none;
   }
   
   /* Show Mobile FAB */
