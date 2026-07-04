@@ -181,6 +181,16 @@ p {
   transform: translateY(-3px);
 }
 
+:root.light .btn-secondary {
+  color: var(--foreground);
+  border-color: rgba(0, 0, 0, 0.15);
+}
+
+:root.light .btn-secondary:hover {
+  background: rgba(139, 92, 246, 0.08);
+  border-color: var(--primary);
+}
+
 /* Scrollbar styling */
 ::-webkit-scrollbar {
   width: 8px;
