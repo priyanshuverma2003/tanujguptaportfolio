@@ -1,9 +1,15 @@
 .contact-grid {
-  display: grid;
-  grid-template-columns: 0.9fr 1.1fr;
-  gap: 4rem;
-  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
   margin-top: 2rem;
+  padding: 2rem;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 16px;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
 }
 
 .contact-info {

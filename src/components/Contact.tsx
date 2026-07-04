@@ -111,7 +111,7 @@ export default function Contact() {
               </a>
             </div>
           </div>
-            <a href="mailto:tanujgupta1234.tg@gmail.com?subject=Hire%20Me" className="hire-me-btn glass-panel">Hire Me</a>
+            <a href="mailto:tanujgupta1234.tg@gmail.com?subject=Hire%20Me" className="btn-primary">Hire Me</a>
 {/* Contact form removed */}
         </div>
       </div>
