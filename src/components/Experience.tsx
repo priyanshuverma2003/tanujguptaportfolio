@@ -3,7 +3,7 @@
 import { useEffect, useRef } from "react";
 import { Briefcase, Calendar, Award } from "lucide-react";
 import "./Experience.css";
-import ThreeDWrapper from "./ThreeDWrapper";
+
 
 const TIMELINE_ITEMS = [
   {
@@ -60,7 +60,7 @@ export default function Experience() {
   }, []);
 
   return (
-    <ThreeDWrapper>
+    <>
       <section id="experience" className="section" ref={sectionRef}>
         <div className="section-content">
           <div className="reveal-on-scroll">
@@ -95,6 +95,6 @@ export default function Experience() {
           </div>
         </div>
       </section>
-    </ThreeDWrapper>
+    </>
   );
 }

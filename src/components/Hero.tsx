@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { ArrowDown, Laptop, Sparkles, ArrowRight, Palette, Video, Film } from "lucide-react";
 import "./Hero.css";
 import SocialLinks from "./SocialLinks";
-import ThreeDWrapper from "./ThreeDWrapper";
+
 // duplicate import removed
 
 const ROLES = ["Graphic Designer", "Video Editor", "Brand Strategist"];
@@ -43,7 +43,7 @@ export default function Hero() {
   }, [displayText, isDeleting, roleIdx, typingSpeed]);
 
 return (
-  <ThreeDWrapper>
+  <>
     <section id="home" className="hero-section">
       <div className="hero-grid">
         <div className="hero-info">
@@ -83,6 +83,7 @@ return (
           <div className="visual-cube-box">
             <div className="visual-core-glow">
               <Laptop className="visual-core-icon" size={46} />
+              <ArrowRight className="visual-core-icon arrow-right" size={28} />
             </div>
           </div>
         </div>
@@ -95,6 +96,6 @@ return (
         <ArrowDown size={18} />
       </a>
     </section>
-  </ThreeDWrapper>
+  </>
 );
 }
