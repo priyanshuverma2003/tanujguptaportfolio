@@ -1,0 +1,22 @@
+/* Back to Top button styling */
+.back-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  padding: 0.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--foreground);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transition: all var(--transition-fast);
+  z-index: 1000;
+}
+.back-to-top:hover {
+  background: var(--primary);
+  color: #fff;
+  transform: scale(1.05);
+}
