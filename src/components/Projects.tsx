@@ -1,7 +1,8 @@
 "use client";
 
+// Hero images enabled and paint icon removed
 import { useEffect, useRef } from "react";
-import { Palette, ExternalLink } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 import "./Projects.css";
 import brandImg from "../assets/highlights/brand_identity.jpg";
 import socialImg from "../assets/highlights/social_media.jpg";
@@ -77,7 +78,7 @@ export default function Projects() {
       <div className="section-content">
         <div className="reveal-on-scroll">
           <h2 className="section-title">
-            <Palette className="section-title-icon" size={28} /> Portfolio Highlights
+              Portfolio Highlights
           </h2>
         </div>
 
