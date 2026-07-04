@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Mail, Send, MessageSquare, Phone, ArrowUpRight, Linkedin, Palette } from "lucide-react";
 import "./Contact.css";
+// Updated LinkedIn & Behance cards for better visual consistency
 
 export default function Contact() {
   const sectionRef = useRef<HTMLDivElement>(null);
