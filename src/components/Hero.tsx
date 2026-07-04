@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { ArrowDown, Laptop, Sparkles, ArrowRight, Palette, Video, Film } from "lucide-react";
+import { ArrowDown, ArrowLeft, Sparkles, ArrowRight, Palette, Video, Film } from "lucide-react";
 import "./Hero.css";
 import SocialLinks from "./SocialLinks";
 
@@ -82,7 +82,7 @@ return (
           <div className="visual-inner-ring"></div>
           <div className="visual-cube-box">
             <div className="visual-core-glow">
-              <Laptop className="visual-core-icon" size={46} />
+              <ArrowLeft className="visual-core-icon arrow-left" size={28} />
             </div>
           </div>
         </div>
