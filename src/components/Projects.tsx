@@ -1,18 +1,18 @@
 "use client";
 
-import { useRef, useEffect } from 'react';
-
-// Hero images are served from the public folder
-const HERO_IMAGES = [
-  "/highlights/brand_identity.jpg",
-  "/highlights/social_media.jpg",
-  "/highlights/video_production.jpg",
-];
-
-
+// Hero images enabled and paint icon removed
+import { useEffect, useRef } from "react";
+import { ExternalLink } from "lucide-react";
+import "./Projects.css";
+import brandImg from "../assets/highlights/brand_identity.jpg";
+import socialImg from "../assets/highlights/social_media.jpg";
+import videoImg from "../assets/highlights/video_production.jpg";
+import freelanceImg from "../assets/highlights/freelance_creative_works.jpg";
 
 const BehanceIcon = () => (
-  <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M22 7h-7V5h7v2zm1.726 10c-.442 1.297-2.029 3-5.101 3-3.074 0-5.564-1.729-5.564-5.675 0-3.91 2.325-5.92 5.466-5.92 3.082 0 4.964 1.782 5.375 4.426.078.506.109 1.188.095 2.14H15.97c.13 3.211 3.483 3.312 4.588 2.029h3.168zm-7.686-4h4.965c-.105-1.547-1.136-2.219-2.477-2.219-1.466 0-2.277.768-2.488 2.219zm-9.574 6.988H0V5.021h6.953c5.476.081 5.58 5.444 2.72 6.906 3.461 1.26 3.577 8.061-3.207 8.061zM3 11h3.584c2.508 0 2.906-3-.312-3H3v3zm3.391 3H3v3.016h3.341c3.055 0 2.868-3.016.05-3.016z"/></svg>
+  <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+    <path d="M22 7h-7V5h7v2zm1.726 10c-.442 1.297-2.029 3-5.101 3-3.074 0-5.564-1.729-5.564-5.675 0-3.91 2.325-5.92 5.466-5.92 3.082 0 4.964 1.782 5.375 4.426.078.506.109 1.188.095 2.14H15.97c.13 3.211 3.483 3.312 4.588 2.029h3.168zm-7.686-4h4.965c-.105-1.547-1.136-2.219-2.477-2.219-1.466 0-2.277.768-2.488 2.219zm-9.574 6.988H0V5.021h6.953c5.476.081 5.58 5.444 2.72 6.906 3.461 1.26 3.577 8.061-3.207 8.061zM3 11h3.584c2.508 0 2.906-3-.312-3H3v3zm3.391 3H3v3.016h3.341c3.055 0 2.868-3.016.05-3.016z"/>
+  </svg>
 );
 
 const PROJECTS_DATA = [
@@ -46,7 +46,12 @@ const PROJECTS_DATA = [
   },
 ];
 
-
+const HERO_IMAGES = [
+  brandImg,
+  socialImg,
+  videoImg,
+  freelanceImg,
+];
 
 export default function Projects() {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -73,48 +78,29 @@ export default function Projects() {
     <section id="projects" className="section" ref={sectionRef}>
       <div className="section-content">
         <div className="reveal-on-scroll">
-          <h2 className="section-title">
-              Portfolio Highlights
-          </h2>
+          <h2 className="section-title">Portfolio Highlights</h2>
         </div>
-
         <div className="projects-grid reveal-on-scroll">
           {PROJECTS_DATA.map((project, idx) => (
             <div key={idx} className="project-card glass-panel">
-              {/* Project Preview visual banner */}
               <div className="project-preview-banner" style={{
-                  backgroundImage: `url(${HERO_IMAGES[idx] || project.gradient})`,
-                  backgroundSize: 'cover',
-                  backgroundPosition: 'center',
-                  backgroundRepeat: 'no-repeat',
-                }}>
+                backgroundImage: `url(${HERO_IMAGES[idx] || project.gradient})`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                backgroundRepeat: "no-repeat",
+              }}>
                 <div className="preview-mesh"></div>
-  
               </div>
-
-              {/* Project content */}
               <div className="project-info-block">
                 <h3 className="project-card-title">{project.title}</h3>
                 <p className="project-card-desc">{project.desc}</p>
-
-                {/* Tech Tags */}
                 <div className="project-tech-tags">
                   {project.tech.map((t, i) => (
-                    <span key={i} className="tech-badge">
-                      {t}
-                    </span>
+                    <span key={i} className="tech-badge">{t}</span>
                   ))}
                 </div>
-
-                {/* Links Footer */}
                 <div className="project-links">
-                  <a
-                    href={project.demoUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="project-link-btn primary-style"
-                    title="View on Behance"
-                  >
+                  <a href={project.demoUrl} target="_blank" rel="noopener noreferrer" className="project-link-btn primary-style" title="View on Behance">
                     <BehanceIcon />
                     <span>View on Behance</span>
                   </a>
