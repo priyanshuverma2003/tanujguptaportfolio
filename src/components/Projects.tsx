@@ -1,10 +1,11 @@
 "use client";
+import { useRef, useEffect } from 'react';
 
 // Hero images are served from the public folder
 const HERO_IMAGES = [
   "/highlights/brand_identity.jpg",
   "/highlights/social_media.jpg",
-  "/highlights/video_production.jpg",
+  "/highlights/vp.png",
 ];
 
 
