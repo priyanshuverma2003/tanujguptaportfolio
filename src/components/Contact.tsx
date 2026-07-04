@@ -1,16 +1,12 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
-import { Send, MessageSquare, ArrowUpRight, Palette } from "lucide-react";
-import { FaEnvelope, FaPhone, FaLinkedin, FaBehance } from "react-icons/fa";
+import { useEffect, useRef } from "react";
+import { MessageSquare, ArrowUpRight } from "lucide-react";
+import { FaEnvelope, FaPhoneAlt, FaLinkedinIn, FaBehance } from "react-icons/fa";
 import "./Contact.css";
-// Updated LinkedIn & Behance cards for better visual consistency
 
 export default function Contact() {
   const sectionRef = useRef<HTMLDivElement>(null);
-  const [formData, setFormData] = useState({ name: "", email: "", message: "" });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle");
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -30,27 +26,6 @@ export default function Contact() {
     return () => observer.disconnect();
   }, []);
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
-  };
-
-  const handleFormSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    setSubmitStatus("idle");
-
-    // Simulate API request delay
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setSubmitStatus("success");
-      setFormData({ name: "", email: "", message: "" });
-
-      // Reset success status after 5s
-      setTimeout(() => setSubmitStatus("idle"), 5000);
-    }, 1500);
-  };
-
   return (
     <section id="contact" className="section" ref={sectionRef}>
       <div className="section-content">
@@ -62,9 +37,9 @@ export default function Contact() {
 
         <div className="contact-grid">
           <div className="contact-info reveal-on-scroll">
-            <h3 className="contact-lead-title">Let's create something amazing together.</h3>
+            <h3 className="contact-lead-title">Let&apos;s create something amazing together.</h3>
             <p className="contact-lead-desc">
-              Have a design project in mind, need a video edited, or want to elevate your brand's visual identity? Send me a message and I'll get back to you within 24 hours.
+              Have a design project in mind, need a video edited, or want to elevate your brand&apos;s visual identity? Send me a message and I&apos;ll get back to you within 24 hours.
             </p>
 
             <div className="contact-channels">
@@ -81,7 +56,7 @@ export default function Contact() {
 
               <a href="tel:+919971091605" className="channel-card glass-panel">
                  <div className="channel-icon-box purple-accent">
-                   <FaPhone size={20} />
+                   <FaPhoneAlt size={20} />
                  </div>
                  <div className="channel-details">
                    <span className="channel-title">Call / WhatsApp</span>
@@ -91,8 +66,8 @@ export default function Contact() {
               </a>
 
               <a href="https://www.linkedin.com/in/tanujgupta" className="channel-card glass-panel linkedin-card" target="_blank" rel="noopener noreferrer">
-                  <div className="channel-icon-box blue-accent">
-                    <FaLinkedin size={20} />
+                  <div className="channel-icon-box purple-accent">
+                     <FaLinkedinIn size={20} />
                   </div>
                   <div className="channel-details">
                     <span className="channel-title">LinkedIn</span>
@@ -113,8 +88,6 @@ export default function Contact() {
               </a>
             </div>
           </div>
-            <a href="mailto:tanujgupta1234.tg@gmail.com?subject=Hire%20Me" className="btn-primary">Hire Me</a>
-{/* Contact form removed */}
         </div>
       </div>
     </section>

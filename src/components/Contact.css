@@ -1,7 +1,7 @@
 .contact-grid {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1rem;
   align-items: center;
   margin-top: 2rem;
   padding: 2rem;
@@ -244,20 +244,5 @@
   }
   .channel-link-arrow {
     display: none;
-  }
-  .hire-me-btn {
-    display: inline-block;
-    margin-top: 1.5rem;
-    padding: 0.75rem 1.5rem;
-    background: linear-gradient(135deg, var(--primary), var(--secondary));
-    color: #fff;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
-  }
-  .hire-me-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(192,132,252,0.3);
   }
 }

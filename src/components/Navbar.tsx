@@ -7,11 +7,12 @@ import SocialLinks from "./SocialLinks";
 import "./Navbar.css";
 
 const NAV_ITEMS = [
-  { label: "Home", href: "#home" },
-  { label: "About", href: "#about" },
-  { label: "Skills", href: "#skills" },
-  { label: "Experience", href: "#experience" },
-  { label: "Portfolio", href: "#projects" },
+  { label: "Home", href: "/#home" },
+  { label: "About", href: "/#about" },
+  { label: "Skills", href: "/#skills" },
+  { label: "Experience", href: "/#experience" },
+  { label: "Portfolio", href: "/#projects" },
+  { label: "CV", href: "/cv" },
 ];
 
 export default function Navbar() {
@@ -56,7 +57,7 @@ export default function Navbar() {
                 {item.label}
               </a>
             ))}
-            <a href="#contact" className="nav-cta">
+            <a href="/#contact" className="nav-cta">
               Hire Me <ArrowUpRight className="cta-icon" size={16} />
             </a>
 
@@ -98,7 +99,7 @@ export default function Navbar() {
             ))}
             
             <a
-              href="#contact"
+              href="/#contact"
               className="overlay-nav-cta"
               onClick={handleLinkClick}
               style={{ animationDelay: `${NAV_ITEMS.length * 0.08}s` }}

@@ -4,10 +4,7 @@
 import { useEffect, useRef } from "react";
 import { ExternalLink } from "lucide-react";
 import "./Projects.css";
-import brandImg from "../assets/highlights/brand_identity.jpg";
-import socialImg from "../assets/highlights/social_media.jpg";
-import videoImg from "../assets/highlights/video_production.jpg";
-import freelanceImg from "../assets/highlights/freelance_creative_works.jpg";
+// Image imports removed – using public folder assets
 
 const BehanceIcon = () => (
   <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
@@ -46,11 +43,11 @@ const PROJECTS_DATA = [
   },
 ];
 
-const HERO_IMAGES = [
-  brandImg,
-  socialImg,
-  videoImg,
-  freelanceImg,
+const HERO_IMAGES: string[] = [
+  '/assets/highlights/firstimage.png',
+  '/assets/highlights/secondimage.png',
+  '/assets/highlights/thirdimage.png',
+  '/assets/highlights/fourthimage.png',
 ];
 
 export default function Projects() {
@@ -86,10 +83,9 @@ export default function Projects() {
               <div className="project-preview-banner" style={{
                 backgroundImage: `url(${HERO_IMAGES[idx] || project.gradient})`,
                 backgroundSize: "cover",
-                backgroundPosition: "center",
+                backgroundPosition: "top center",
                 backgroundRepeat: "no-repeat",
               }}>
-                <div className="preview-mesh"></div>
               </div>
               <div className="project-info-block">
                 <h3 className="project-card-title">{project.title}</h3>

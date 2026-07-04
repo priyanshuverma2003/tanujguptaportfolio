@@ -1,0 +1,213 @@
+.cv-container {
+  min-height: 100vh;
+  padding: 120px 2rem 60px;
+  background: var(--background);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.cv-content-wrapper {
+  width: 100%;
+  max-width: 600px; /* Reduced to look like a clean single card page */
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.cv-header {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+  text-align: center;
+}
+
+.back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: color var(--transition-fast), transform var(--transition-fast);
+}
+
+.back-btn:hover {
+  color: var(--foreground);
+  transform: translateX(-4px);
+}
+
+.cv-title-area {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.cv-title {
+  font-size: 2.75rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.cv-title span {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.cv-icon {
+  color: var(--primary);
+  filter: drop-shadow(0 0 8px rgba(192, 132, 252, 0.4));
+}
+
+.cv-subtitle {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+}
+
+.cv-viewer-container {
+  overflow: hidden;
+  padding: 3rem 2rem !important;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 24px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.cv-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1.5rem;
+}
+
+.cv-file-thumbnail {
+  position: relative;
+  width: 130px;
+  height: 160px;
+  background: rgba(192, 132, 252, 0.05);
+  border: 2px dashed rgba(192, 132, 252, 0.3);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+  transition: transform var(--transition-normal), border-color var(--transition-normal);
+}
+
+.cv-card:hover .cv-file-thumbnail {
+  transform: translateY(-5px);
+  border-color: var(--secondary);
+}
+
+.thumbnail-icon {
+  color: var(--primary);
+  filter: drop-shadow(0 0 10px rgba(192, 132, 252, 0.3));
+}
+
+.file-type-badge {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  background: var(--accent);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.25rem 0.6rem;
+  border-radius: 6px;
+}
+
+.cv-card h3 {
+  font-size: 1.6rem;
+  color: var(--foreground);
+  font-weight: 700;
+}
+
+.cv-card p {
+  color: var(--text-muted);
+  font-size: 1.05rem;
+}
+
+.cv-action-buttons {
+  display: flex;
+  width: 100%;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.download-btn-premium {
+  flex: 1;
+  background: linear-gradient(135deg, var(--primary), #a855f7);
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  padding: 0.95rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  box-shadow: 0 4px 20px rgba(192, 132, 252, 0.3);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.download-btn-premium:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(192, 132, 252, 0.5);
+}
+
+.view-btn-secondary {
+  flex: 1;
+  background: transparent;
+  color: #fff;
+  border: 1px solid var(--card-border);
+  border-radius: 50px;
+  padding: 0.95rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  transition: border-color var(--transition-fast), background var(--transition-fast), transform var(--transition-fast);
+}
+
+.view-btn-secondary:hover {
+  border-color: var(--secondary);
+  background: rgba(34, 211, 238, 0.05);
+  transform: translateY(-3px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .cv-container {
+    padding: 100px 1.25rem 40px;
+  }
+  
+  .cv-title {
+    font-size: 2.25rem;
+  }
+  
+  .cv-viewer-container {
+    padding: 2rem 1.5rem !important;
+  }
+
+  .cv-action-buttons {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  
+  .download-btn-premium, .view-btn-secondary {
+    width: 100%;
+  }
+}
