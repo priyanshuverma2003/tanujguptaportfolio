@@ -87,9 +87,31 @@ export default function Contact() {
                 </div>
                 <ArrowUpRight className="channel-link-arrow" size={16} />
               </a>
+
+              <a href="https://www.linkedin.com/in/tanujgupta" className="channel-card glass-panel" target="_blank" rel="noopener noreferrer">
+                <div className="channel-icon-box blue-accent">
+                  <MessageSquare size={20} />
+                </div>
+                <div className="channel-details">
+                  <span className="channel-title">LinkedIn</span>
+                  <span className="channel-val">tanujgupta</span>
+                </div>
+                <ArrowUpRight className="channel-link-arrow" size={16} />
+              </a>
+
+              <a href="https://www.behance.net/tanujgupta" className="channel-card glass-panel" target="_blank" rel="noopener noreferrer">
+                <div className="channel-icon-box pink-accent">
+                  <Send size={20} />
+                </div>
+                <div className="channel-details">
+                  <span className="channel-title">Behance</span>
+                  <span className="channel-val">tanujgupta</span>
+                </div>
+                <ArrowUpRight className="channel-link-arrow" size={16} />
+              </a>
             </div>
           </div>
-
+            <a href="mailto:tanujgupta1234.tg@gmail.com?subject=Hire%20Me" className="hire-me-btn glass-panel">Hire Me</a>
 {/* Contact form removed */}
         </div>
       </div>
