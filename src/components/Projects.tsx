@@ -44,9 +44,9 @@ const PROJECTS_DATA = [
 ];
 
 const HERO_IMAGES = [
-  "/brand_identity.jpg",
-  "/social_media.jpg",
-  "/video_production.jpg",
+  brandImg,
+  socialImg,
+  videoImg,
 ];
 
 export default function Projects() {
@@ -90,7 +90,7 @@ export default function Projects() {
                   backgroundRepeat: 'no-repeat',
                 }}>
                 <div className="preview-mesh"></div>
-                <Palette className="preview-icon" size={48} />
+  
               </div>
 
               {/* Project content */}
