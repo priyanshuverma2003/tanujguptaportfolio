@@ -1,12 +1,11 @@
 "use client";
 
-// Hero images enabled and paint icon removed
-import { useEffect, useRef } from "react";
-import { ExternalLink } from "lucide-react";
-// Ensure hero images are displayed
-import brandImg from "../assets/highlights/brand_identity.jpg";
-import socialImg from "../assets/highlights/social_media.jpg";
-import videoImg from "../assets/highlights/video_production.jpg";
+// Hero images are served from the public folder
+const HERO_IMAGES = [
+  "/highlights/brand_identity.jpg",
+  "/highlights/social_media.jpg",
+  "/highlights/video_production.jpg",
+];
 
 
 
@@ -45,11 +44,7 @@ const PROJECTS_DATA = [
   },
 ];
 
-const HERO_IMAGES = [
-  brandImg,
-  socialImg,
-  videoImg,
-];
+
 
 export default function Projects() {
   const sectionRef = useRef<HTMLDivElement>(null);
